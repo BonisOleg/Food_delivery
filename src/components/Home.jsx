@@ -38,7 +38,7 @@ const AnimatedPlateComponent = ({ plateControls, textControls }) => {
 
     return (
         <motion.div
-            className="absolute left-[25%] transform -translate-x-1/2 -translate-y-1/2"
+            className="absolute left-[10%] sm:left-[20%] md:left-[25%] transform -translate-x-1/2 -translate-y-1/2 top-[40%] sm:top-[45%] md:top-[50%]"
             variants={plateVariants}
             initial="hidden"
             animate={plateControls}
@@ -46,7 +46,7 @@ const AnimatedPlateComponent = ({ plateControls, textControls }) => {
             <motion.img
                 src={PLATE_IMAGE_URL}
                 alt="Restaurant plate"
-                className="w-auto h-[35vh] sm:h-[45vh] md:h-[50vh] max-w-full"
+                className="w-auto h-[25vh] sm:h-[35vh] md:h-[45vh] lg:h-[50vh] max-w-full"
             />
             <motion.div
                 className="absolute top-[45%] left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center whitespace-nowrap"
@@ -54,10 +54,10 @@ const AnimatedPlateComponent = ({ plateControls, textControls }) => {
                 initial="hidden"
                 animate={textControls}
             >
-                <h1 className="font-extrabold text-4xl sm:text-5xl md:text-6xl text-white drop-shadow-[0_2px_3px_rgba(0,0,0,0.6)]">
+                <h1 className="font-extrabold text-2xl sm:text-3xl md:text-5xl lg:text-6xl text-white drop-shadow-[0_2px_3px_rgba(0,0,0,0.6)]">
                     Daniel
                 </h1>
-                <p className="font-semibold text-xl sm:text-2xl md:text-3xl text-white drop-shadow-[0_2px_2px_rgba(0,0,0,0.6)]">
+                <p className="font-semibold text-lg sm:text-xl md:text-2xl lg:text-3xl text-white drop-shadow-[0_2px_2px_rgba(0,0,0,0.6)]">
                     delivery
                 </p>
             </motion.div>
@@ -77,12 +77,12 @@ const DeliveryInfoComponent = ({ deliveryControls }) => {
 
     return (
         <motion.div
-            className="absolute top-[65%] right-[15%] transform -translate-y-1/2 w-auto max-w-md text-center"
+            className="absolute top-[60%] sm:top-[65%] md:top-[70%] right-[5%] sm:right-[10%] md:right-[15%] transform -translate-y-1/2 w-auto max-w-xs sm:max-w-sm md:max-w-md text-center"
             variants={deliveryVariants}
             initial="hidden"
             animate={deliveryControls}
         >
-            <p className="text-xl sm:text-2xl md:text-3xl text-yellow-800 font-bold drop-shadow-[0_1px_1px_rgba(255,255,255,0.8)] bg-[#F5ECDA]/30 backdrop-blur-sm py-2 px-4 rounded-lg">
+            <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-yellow-800 font-bold drop-shadow-[0_1px_1px_rgba(255,255,255,0.8)] bg-[#F5ECDA]/30 backdrop-blur-sm py-2 px-4 rounded-lg">
                 Смак Вірменії у вас вдома
             </p>
         </motion.div>
