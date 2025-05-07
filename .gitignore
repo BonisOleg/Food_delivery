@@ -59,4 +59,7 @@ target/
 .swc/
 *.tsbuildinfo
 coverage/
-.nyc_output/ 
+.nyc_output/
+
+# Custom rules files
+*.mdc 

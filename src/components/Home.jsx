@@ -1,37 +1,12 @@
 import { motion, useAnimation } from 'framer-motion';
 import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import Header from './layout/Header';
+import Footer from './layout/Footer';
 
 // Припускаємо, що зображення знаходяться в public/images/
 const BACKGROUND_IMAGE_URL = '/images/background.png';
 const PLATE_IMAGE_URL = '/images/plate.png';
-
-const Header = () => {
-    return (
-        <header className="fixed top-0 left-0 right-0 z-50 bg-[#F5ECDA]/90 backdrop-blur-sm py-4 px-6 shadow-md">
-            <nav className="container mx-auto flex justify-center">
-                <ul className="flex space-x-8 md:space-x-12">
-                    <li><Link to="/" className="text-yellow-800 hover:text-yellow-600 font-bold text-lg transition-colors drop-shadow-sm border-b-2 border-yellow-800">Головна</Link></li>
-                    <li><Link to="/menu" className="text-yellow-800 hover:text-yellow-600 font-bold text-lg transition-colors drop-shadow-sm">Меню</Link></li>
-                    <li><Link to="/bar" className="text-yellow-800 hover:text-yellow-600 font-bold text-lg transition-colors drop-shadow-sm">Бар</Link></li>
-                    <li><Link to="/delivery" className="text-yellow-800 hover:text-yellow-600 font-bold text-lg transition-colors drop-shadow-sm">Доставка</Link></li>
-                    <li><Link to="/promotions" className="text-yellow-800 hover:text-yellow-600 font-bold text-lg transition-colors drop-shadow-sm">Акції</Link></li>
-                    <li><Link to="/contacts" className="text-yellow-800 hover:text-yellow-600 font-bold text-lg transition-colors drop-shadow-sm">Контакти</Link></li>
-                </ul>
-            </nav>
-        </header>
-    );
-};
-
-const Footer = () => {
-    return (
-        <footer className="fixed bottom-0 left-0 right-0 z-40 bg-[#F5ECDA]/90 backdrop-blur-sm py-3 px-6 shadow-inner">
-            <div className="container mx-auto text-center text-yellow-800">
-                <p className="text-sm">© 2023 Daniel Delivery. Всі права захищені.</p>
-            </div>
-        </footer>
-    );
-};
 
 const BackgroundComponent = () => (
     <div
